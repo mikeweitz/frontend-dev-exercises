@@ -1,1 +1,115 @@
+
+/* normalize box model */
+* { 
+  -webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+  -moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+  box-sizing: border-box;   
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
 /* normalize.css has been included before this file */
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	padding: 10%;
+	background: url(../img/texture.png) #333;
+}
+
+#app {
+	color: #f3f3f3;
+	background: rgba(123,456,789, 0.35);
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(123,456,789, 0.5);;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+button, input {
+	color: black;
+}
+
+.panel {
+	position: absolute;
+	padding: 0.25em;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: left 0.5s ease-out; 
+          transition: all 0.5s ease-out; 
+}
+
+#form {
+	padding: 18%;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+a:link,
+a:visited {
+	color: rgba(255, 183, 32, 1);
+}
+
+a:hover, 
+a:active {
+	color: rgba(255, 183, 32, 0.75);
+}
+
+#results-container { 
+	overflow-y: scroll;
+}
+
+#app.search #form{ left: 0; }
+#app.search #results-container { left: 100%; }
+#app.search #overlay-container { left: 200%; }
+
+#app.list #form { left: -100%; }
+#app.list #results-container { left: 0;}
+#app.list #overlay-container { left: 100%; }
+
+#app.detail #form { left: -200%; }
+#app.detail #results-container { left: -100%;}
+#app.detail #overlay-container { left: 0%; }
+
+
+/* list sylte */
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	height: 1.75em;
+	line-height: 1.75em;
+	margin: 0.1em;
+	padding: 0.125em 0.5em;
+	background-color: rgba(0,0,0,0.25);
+}
+li:hover {
+	background-color: rgba(0,0,0,0.125);
+}
+li.visited {
+	background-color: rgba(0,0,0,0.10);
+}
