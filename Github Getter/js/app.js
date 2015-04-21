@@ -18,10 +18,10 @@ var App = (function($, _){
       '<%= repo.name %> (<%= repo.score %>) ' +
       '</li>'),
     tplDetail = _.template('<h1>Details for <%= name %></h1>' + 
-      '<a href="<%= url %>" target="_blank"><%= url %></a></p>' +
+      'url: <a href="<%= url %>" target="_blank"><%= url %></a></p>' +
       '<div class="lang">Lanuage: <%= language %></div>' + 
       '<p>Followers: <%= followers %><br/>' +
-      '<p><%= description %></p>');
+      '<p>Description: <%= description %></p>');
 
 
   // 
